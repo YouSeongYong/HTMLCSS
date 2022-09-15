@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //반환값 > String  prompt 항상 문자열로 반환하니까 숫자로 변환하기
+        let java = Number(prompt("Java 점수를 입력하세요"));
+        let Android = Number(prompt("Android 점수를 입력하세요"));
+        let Web = Number(prompt("Web 점수를 입력하세요"));
+
+        av = ((java + Android + Web)/3).toFixed(2);
+        if (av >= 90) {
+            console.log("당신의 평균은 " + av + "이고 A이다")
+            //grade='A';
+
+        } else if (av >= 80) {
+            console.log("당신의 평균은 " + av + "이고 B이다")
+            //grade='B';
+        } else if (av >= 70) {
+            console.log("당신의 평균은 " + av + "이고 C이다")
+            //grade='C';
+        } else {
+            console.log("당신의 평균은 " + av + "이고 F이다")
+            //grade='C';
+        }
+        //console.log("당신의 평균은 "+av+"이고 학점은"+grade+"입니다");
+
+    </script>
+
+
+</body>
+
+</html>
