@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button id='like'>좋아요</button><span >0</span>
+    <br>
+    <input type="text"><button class='writeCom'>댓글작성</button>
+    <br>
+    <div id="com">
+        <p>첫댓글<button class='removeCom'>삭제</button></p>
+    </div>
+
+    <script>
+       $(document).on("click","#like",function(){
+        $("span").text("1");
+        $("#like").text("좋아요취소");
+        $("#like").addClass("unlike");
+       });
+       $(document).on("click",".unlike",function(){
+        $("span").text("0");
+        $(".unlike").text("좋아요")
+        $(".unlike").removeClass("unlike")
+        
+       })
+       $(document).on("click",".writeCom",function(){
+        $("div").prepend("<p class='remove'>"+$('input[type=text]').val()+"<button class='removeCom'>삭제</button></p>");
+       })
+       $(document).on("click",".removeCom",function(){
+        $(this).parent().remove();
+       })
+    </script>
+        
+</body>
+</html>
