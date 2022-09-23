@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            background-color: whitesmoke;
+            height: 80px;
+            display: flex;
+            justify-content: space-between ;
+            align-items: center;
+
+        }
+        
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .second-box{
+            word-spacing: 20px;
+        }
+        .second-box>a:hover {
+            background-color: black;
+        
+            color: white;
+            /* padding: 20px;  <<호버 안에 하면 사용자가 이용할때 들쑬날쑥*/ 
+            
+        }
+        .second-box>a{
+            font-size: 25px;
+            padding: 20px;
+        }
+        .third-box>a:hover{
+            background-color: black;
+            color: yellow;
+
+        }
+
+        .first-box{flex-grow: 1;
+
+        }
+        .second-box{flex-grow: 2;
+
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+        }
+        .third-box{flex-grow: 1;
+
+        }
+        /* .third-box >a {
+            justify-content: flex-end;
+        } */
+        
+        /* #item1{flex-grow: 1;}
+        #item2{flex-grow: 2;}
+        #item3{flex-grow: 1;} */
+       
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="first-box" id="item1" >
+            <h2> sense </h2>
+        </div>
+
+        <div class="second-box" id="item2" align="center">
+            <a href="#">Menu</a>
+            <a href="#">Best</a>
+            <a href="#">Event</a>
+        </div>
+        <div class="third-box" id="item3" align="center">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
+    </div>
+</body>
+</html>
